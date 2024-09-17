@@ -1,0 +1,130 @@
+/* Reset all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header container styling */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #EA2127;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Logo section: aligns logo and text */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text p {
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
+  font-size: 35px;
+  letter-spacing: 5px;
+  color: #FFFFFF;
+}
+
+.logo-img {
+  width: 50px; /* Adjust size for a smaller logo */
+  margin-right: 10px; /* Adds space between logo and text */
+}
+
+/* Full menu styling (Desktop view) */
+.menu-section {
+  display: flex;
+  align-items: center;
+}
+
+.menu-section .menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu-section .menu a {
+  font-family: Montserrat, sans-serif;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.menu-section .menu a:hover {
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #EA2127;
+}
+
+/* Hamburger menu toggle button (hidden by default, shown on mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .header-container {
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  /* Show the hamburger icon and hide the full menu by default */
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-section {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: #EA2127;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu-section.mobile-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-section .menu {
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .menu-section .menu a {
+    font-size: 18px;
+    padding: 15px 0;
+    text-align: center;
+    color: #FFFFFF;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .menu-section .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background */
+    color: #FFFFFF; /* Keep text white */
+  }
+
+  .logo-section {
+    flex-grow: 1; /* Makes logo take up available space */
+  }
+}

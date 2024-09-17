@@ -1,0 +1,111 @@
+/* src/components/ProductGrid.css */
+.product-grid-container {
+  padding: 20px 120px; /* Padding for larger screens */
+  background-color: #EA2127;
+  color: #FFFFFF66;
+  overflow-x: hidden;
+}
+
+.product-grid-title {
+  font-family: 'ActOfRejection', sans-serif;
+  font-weight: 400;
+  font-size: 140px; /* Font size for larger screens */
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  overflow: hidden; 
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+  margin-top: -65px;
+  animation: scroll-horizontal 20s linear infinite;
+  width: max-content;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width: 300px; /* Card width for larger screens */
+  margin-top: -30px;
+  text-align: center;
+  scroll-snap-align: start;
+  padding: 5px;
+}
+
+.product-image {
+  width: 100%;
+  height: 300px; /* Image height for larger screens */
+  padding: 0;
+}
+
+.product-image img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.product-name {
+  font-family: 'Inter';
+  font-size: 20px; /* Font size for larger screens */
+  font-weight: 500;
+  margin-top: 10px;
+  color: #ffffffd3;
+}
+
+.product-price {
+  font-family: 'Inter';
+  font-size: 18px; /* Font size for larger screens */
+  font-weight: 500;
+  color: #ffffffd3;
+  margin-left: 10px;
+}
+
+.product-old-price {
+  text-decoration: line-through;
+  margin-left: 10px;
+  color: #FFFFFF66;
+}
+
+/* Updated keyframes to scroll the entire grid and loop seamlessly */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.product-grid.paused {
+  animation-play-state: paused;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .product-grid-container {
+    padding: 20px; /* Reduced padding for mobile */
+  }
+
+  .product-grid-title {
+    font-size: 60px; /* Smaller font size for mobile */
+  }
+
+  .product-card {
+    width: 200px; /* Smaller card width for mobile */
+  }
+
+  .product-image {
+    height: 200px; /* Smaller image height for mobile */
+  }
+
+  .product-name {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .product-price {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}

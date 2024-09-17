@@ -1,0 +1,43 @@
+/* Act of Rejection */
+@font-face {
+    font-family: 'ActOfRejection';
+    src: url('./act_of_rejection/Act_Of_Rejection.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Inter Regular and Bold */
+  @font-face {
+    font-family: 'Inter';
+    src: url('./Inter/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    src: url('./Inter/Inter-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  /* Montserrat Regular and Bold */
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('./Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('./Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  /* Optional: Set default font-family for the entire app */
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
