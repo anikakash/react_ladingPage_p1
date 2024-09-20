@@ -1,0 +1,100 @@
+.productGridContainer {
+  padding: 20px;
+  background-color: #EA2127;
+  color: #FFFFFF66;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.productGridTitle {
+  font-family: 'ActOfRejection', sans-serif;
+  font-weight: 400;
+  font-size: 140px; 
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.productGrid {
+  display: flex;
+  overflow: hidden;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+  position: relative;
+  width: 100%; /* Ensure the container takes up full width */
+  animation: scroll-horizontal 20s linear infinite;
+  width: max-content;
+}
+
+
+.productCard {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+  scroll-snap-align: start;
+  padding: 10px;
+}
+
+.productImage {
+  border-radius: 12px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.productName {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #ffffffd3;
+}
+
+.productPrice {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffffd3;
+}
+
+.productOldPrice {
+  text-decoration: line-through;
+  margin-left: 10px;
+  color: #FFFFFF66;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .productGridTitle {
+    font-size: 40px;
+  }
+
+  .productCard {
+    width: 150px;
+  }
+
+  .productImage {
+    height: 150px;
+  }
+
+  .productName {
+    font-size: 14px;
+  }
+
+  .productPrice {
+    font-size: 12px;
+  }
+}

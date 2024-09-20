@@ -1,13 +1,12 @@
 // src/App.jsx
 import React from 'react';
-import Header from './components/Header';
-import ProductGrid from './components/ProductGrid';
+import Applayout from './layout/Applayout';
+
 
 function App() {
   return (
     <div>
-      <Header />
-      <ProductGrid/>
+      <Applayout/>
     </div>
   );
 }

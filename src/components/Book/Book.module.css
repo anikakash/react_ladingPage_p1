@@ -1,0 +1,157 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bookSection {
+  width: 100%;
+  height: 877px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111111;
+  padding: 50px 100px;
+  color: #fff;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.headSection {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.tagLine p {
+  font-family: 'Montserrat', sans-serif;
+  width: 700px;
+  font-weight: 500px;
+  font-size: 49px;
+  line-height: 58.8px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.tagLine span {
+  
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 84px;
+  letter-spacing: 0.5px;
+  color: #DE2A2F;
+}
+
+.btn {
+  width: 186px;
+  height: 52px;
+  padding: 16px 32px;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #111;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+  gap: 12px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.signature img {
+  width: 100%; /* Ensure it scales */
+  max-width: 400px; /* Set a max-width */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 30px;
+}
+
+.bookImages {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-right: 10%;
+}
+
+.bookImages1, .bookImages2 {
+  width: 100%;
+  height: auto;
+}
+
+.bookImages1 {
+  max-width: 400px;
+  max-height: 450px;
+}
+
+.bookImages2 {
+  max-width: 300px;
+  max-height: 380px;
+}
+
+/* Tablet View */
+@media (max-width: 1200px) {
+  .bookSection {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 30px;
+  }
+
+  .headSection {
+    align-items: center;
+    text-align: center;
+  }
+
+  .bookImages {
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .bookImages1, .bookImages2 {
+    width: 80%;
+    height: auto;
+  }
+
+  .btn {
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .bookImages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bookImages1, .bookImages2 {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  .tagLine p {
+    font-size: 36px;
+  }
+
+  .tagLine span {
+    font-size: 50px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .signature img {
+    width: 75%; /* Make signature smaller */
+    max-width: 250px; /* Set a max width for smaller screens */
+  }
+}

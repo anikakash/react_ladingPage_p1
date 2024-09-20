@@ -1,0 +1,250 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container for both sections */
+  .combinedSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Book Section Styling */
+  .bookSection {
+    width: 100%;
+    height: 852px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111;
+    padding: 50px 100px;
+    color: #fff;
+    flex-wrap: wrap;
+  }
+  
+  .headSection {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+  }
+  
+  .tagLine p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 49px;
+    line-height: 58.8px;
+    color: #ffffff;
+  }
+  
+  .tagLine span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 84px;
+    color: #DE2A2F;
+  }
+  
+  .btn {
+    width: 186px;
+    height: 52px;
+    padding: 16px 32px;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #111;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    gap: 12px;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .signature img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 30px;
+  }
+  
+  .bookImages {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+  }
+  
+  .bookImage1, .bookImage2 {
+    width: 100%;
+    height: auto;
+  }
+  
+  .bookImage1 {
+    max-width: 400px;
+  }
+  
+  .bookImage2 {
+    max-width: 300px;
+  }
+  
+/* Mission Section Styling */
+.missionSection {
+    width: 100%;
+    height: 577px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 50px 100px;
+    background-color: #DE2A2F;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.textContainer {
+    max-width: 1116px; /* Ensures the text doesn't stretch too far */
+    z-index: 1;
+    padding-left: 50px;
+    position: relative;
+}
+
+.missionText {
+    font-family: 'Montserrat', sans-serif;
+    width: 1116px;
+    height: 198px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57.6px;
+    letter-spacing: 0.5%;
+    max-width: 500px; /* Fixes the text width */
+}
+
+.quoteIcon {
+    position: absolute;
+    top: -20px; /* Adjust as needed to place correctly */
+    left: 0;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/*
+
+width: 221px;
+height: 221px;
+top: 275px;
+left: 311px;
+padding: 31.08px 0px 31.08px 0px;
+gap: 0px;
+opacity: 0.16px;
+angle: -180 deg;
+
+
+*/
+
+.quoteIcon img{
+    width: 221px;
+    height: 221px;
+    top: 275px;
+    padding: 31.08px;
+    opacity: 12px;
+}
+.imageContainer {
+    z-index: 2;
+    position: relative;
+}
+
+.missionImage {
+    max-width: 400px;
+    height: 800px;
+    position: absolute;
+    top: -120px; /* Increases negative top value for better overlap */
+    right: 0;
+    z-index: 2;
+    transform: translateY(-50px); /* Adjust to overlap between sections */
+}
+
+  
+  /* Responsive View for Combined Section */
+  @media (max-width: 1200px) {
+    .bookSection,
+    .missionSection {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .bookImages {
+      justify-content: center;
+      flex-direction: row;
+      gap: 20px;
+    }
+  
+    .bookImage1,
+    .bookImage2,
+    .missionImage {
+      width: 80%;
+      top: 0;
+      right: 0;
+    }
+  
+    .quoteIcon {
+      display: none;
+    }
+  
+    .missionText {
+      font-size: 24px;
+    }
+  
+    .btn {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .bookImages,
+    .missionSection {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .bookImage1,
+    .bookImage2,
+    .missionImage {
+      width: 60%;
+      margin-bottom: 20px;
+    }
+  
+    .tagLine p {
+      font-size: 36px;
+    }
+  
+    .tagLine span {
+      font-size: 50px;
+    }
+  
+    .btn {
+      font-size: 16px;
+      padding: 12px 25px;
+    }
+  
+    .signature img {
+      width: 75%;
+      max-width: 250px;
+    }
+  
+    .missionText {
+      font-size: 18px;
+    }
+  }
+  

@@ -2,8 +2,8 @@
 @font-face {
     font-family: 'ActOfRejection';
     src: url('./act_of_rejection/Act_Of_Rejection.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    /* font-weight: normal;
+    font-style: normal; */
   }
   
   /* Inter Regular and Bold */

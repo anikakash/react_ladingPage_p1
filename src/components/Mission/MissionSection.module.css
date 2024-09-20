@@ -1,0 +1,96 @@
+.missionSection {
+    height: 577px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 50px 100px;
+    background-color: #DE2A2F;
+    color: #ffffff;
+    overflow: hidden; /* Ensures that elements don't overflow */
+  }
+  
+  .textContainer {
+    max-width: 600px;
+    z-index: 1; /* Ensures that text stays on top */
+  }
+  
+  .quoteIcon {
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    z-index: 0;
+  }
+  
+  .missionText {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    z-index: 1;
+  }
+  
+  /*
+
+width: 571px;
+height: 725px;
+top: -148px;
+left: 1271px;
+gap: 0px;
+opacity: 0px;
+
+
+  */
+  .imageContainer {
+    /* position: relative; */
+    z-index: 2; /* Ensures that the image appears above other sections */
+  }
+  
+  .missionImage {
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: -80px; /* Adjust as needed */
+    right: -50px; /* Adjust the position of the image */
+    z-index: 2;
+  }
+  
+  /* Responsive View */
+  @media (max-width: 1200px) {
+    .missionSection {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .imageContainer {
+      position: relative;
+      top: 20px;
+      right: 0;
+    }
+  
+    .missionImage {
+      position: relative;
+      max-width: 80%;
+      top: 0;
+      right: 0;
+    }
+  
+    .quoteIcon {
+      display: none; /* Hide the quote icon on smaller screens */
+    }
+  
+    .missionText {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .missionText {
+      font-size: 18px;
+    }
+  }
+  
